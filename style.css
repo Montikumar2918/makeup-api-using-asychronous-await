@@ -1,0 +1,107 @@
+.container{
+    background: rgb(216, 230, 154);
+    padding: 10px;
+    margin:10px;
+    border-radius: 10px;
+    display:flex;
+    gap:10px;
+    align-items: top;
+    height:auto;
+    width:auto;
+    
+}
+
+.body{
+    background-image: rgb(11, 58, 77);
+    text-align: center;
+   
+
+    
+}
+
+.image_link{
+    border-radius:25%;
+    margin-bottom: opx;
+    transition: 2s;
+
+}
+p1:hover{
+   color:blueviolet;
+   style: solid;
+}
+/* image will rotate 360 degree */
+.image_link:hover{
+    cursor:pointer;
+    transform: rotate(360deg);
+}
+.container:hover{
+    color:green; 
+    background:rgb(221, 193, 174);
+}
+/* Add a black background color to the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the "active" element to highlight the current page */
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style the search field */
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 30%;
+    background: #f1f1f1;
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 4%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  
