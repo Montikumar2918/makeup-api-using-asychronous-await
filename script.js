@@ -1,7 +1,7 @@
 async function getDetails(){
    try{
       const data = await fetch(
-      "http://makeup-api.herokuapp.com/api/v1/products.json",
+      "https://makeup-api.herokuapp.com/api/v1/products.json",
       {method: "GET"}
       );
    const details = await data.json();
@@ -50,7 +50,7 @@ async function getDetails(){
             async function searchBrand(){
             brands = document.querySelector(".myInput").value;
             const data = await fetch(
-               `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brands}`,
+               `https://makeup-api.herokuapp.com/api/v1/products.json?brand=${brands}`,
                {method: "GET"}
               );
             const details1 = await data.json();
