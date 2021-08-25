@@ -1,13 +1,18 @@
 async function getDetails(){
-    const data = await fetch(
-       "http://makeup-api.herokuapp.com/api/v1/products.json",
-       {method: "GET"}
-       );
-    const details = await data.json();
+   try{
+      const data = await fetch(
+      "http://makeup-api.herokuapp.com/api/v1/products.json",
+      {method: "GET"}
+      );
+   const details = await data.json();
     //console.log(details);
     document.querySelector(".product-list").innerHTML = ``;
     details.forEach((detail) => createDetail(detail));
  }
+ catch(err){
+   console.log(err);
+}
+}  
  function createDetail({id, brand, name, price, price_sign, currency, image_link, product_link, website_link, description, rating, category, product_type, created_at, updated_at}){
     const info = document.createElement("div");
     info.setAttribute("class", "container");
@@ -42,14 +47,14 @@ async function getDetails(){
           //  seraching by Brand name 
           
           
-          async function searchBrand(){
+            async function searchBrand(){
             brands = document.querySelector(".myInput").value;
             const data = await fetch(
                `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brands}`,
                {method: "GET"}
-               );
+              );
             const details1 = await data.json();
-            console.log(details1);
+           console.log(details1);
             details1.forEach((update) => createDetail(update));
             searchBrand(brands); 
          }
