@@ -41,22 +41,26 @@ async function getDetails(){
           </div>
           </div>`;
           document.querySelector(".product-list").append(info)
-          document.body.append(info);                 
+                        
           }
+
           getDetails();
+          
           //  seraching by Brand name 
           
           
             async function searchBrand(){
+            
             brands = document.querySelector(".myInput").value;
             const data = await fetch(
                `https://makeup-api.herokuapp.com/api/v1/products.json?brand=${brands}`,
                {method: "GET"}
               );
             const details1 = await data.json();
-           console.log(details1);
+            console.log(details1);
+            document.querySelector(".product-list").innerHTML = ``;
             details1.forEach((update) => createDetail(update));
-            searchBrand(brands); 
+           
          }
          
          
